@@ -1,0 +1,455 @@
+/* ----------------------------------
+        LE ROOT 
+----------------------------------- */
+:root{
+    --colorPrimaire : rgb(55, 92, 214);
+    --colorGray: #585858;
+}
+
+p{
+    color: var(--colorGray);
+}
+
+.conteneur{
+    padding: 0 10%;
+}
+
+/* ----------------------------------
+        LA NAV BARRE    
+----------------------------------- */
+nav{
+    top: 0;
+    position: sticky;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+    box-shadow: 0px 0px 5px 2px #00000023;
+    z-index: 10;
+}
+
+/* le logo */
+.logo{
+    width: 40px;
+    height: 40px;
+    background-image: url('../SVG/logo.jpg');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* nav link */
+nav a.link{
+    text-decoration: none;
+    padding: 18px 10px;
+
+    color: var(--colorGray);
+    transition: color 200ms;
+}
+
+nav a.close{
+    display: none;
+}
+
+nav #btn-close svg{
+    display: none;
+}
+
+nav a.link:hover {
+    font-weight: bold;
+    border-bottom: var(--colorPrimaire);
+    border-bottom: 2px solid var(--colorPrimaire) ;
+    color: var(--colorPrimaire);
+}
+
+/* le user */
+nav .user{
+    display: flex;
+    align-items: center;
+}
+
+/* btn-toggle-menu */
+#btn-toggle-menu svg{
+    display: none;
+    width: 25px;
+
+    cursor: pointer;
+}
+
+/* ----------------------------------
+        LE CAROUSSEL
+----------------------------------- */
+.carousel-inner{
+    height: 60vh;
+}
+
+.carousel-inner img{
+    height: 60vh;
+    width: 100%;
+    
+    background-position: center;
+    background-size: cover;
+    background-color: #444;
+}
+
+.carousel-inner h1{
+    color: #fff;
+}
+
+.carousel-inner b{
+    color: #fff;
+}
+
+.carousel button{
+    z-index: 3;
+}
+
+.carousel button .carousel-control-prev-icon{
+    color: #fff;
+
+    background-color: red;
+}
+
+.carousel button .carousel-control-next-icon{
+    color: #fff;
+
+    background-color: red;
+}
+
+
+
+
+/* ----------------------------------
+        LAE HEADER
+----------------------------------- */
+header{
+    width: 100%;
+    height: 60vh;
+    position: relative;
+
+    background-color: #ddd;
+    /* background-image: url('../SVG/pattern.svg'); */
+}
+
+header .contain-mot{
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+
+    z-index: 2;
+    color: #fff;
+}
+
+header .contain-mot img{
+    width: 80%;
+}
+
+
+/* -------------------------------------------------------------
+        LES SECTIONS
+------------------------------------------------------------- */
+
+section h2{
+    text-align: center;
+    font-weight: bold;
+
+    color: var(--colorPrimaire);
+}
+
+section h4{
+    font-weight: bold;
+}
+
+/* ------------------- SECTION DECOUVERTE  ------------------- */
+section.decouverte{
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-image: url('../SVG/pattern01.png');
+}
+
+section.decouverte .cart{
+    height: 45vh;
+    margin-top: 20px;
+    padding: 0 5%;
+    display: flex;
+    align-items: center;
+
+    background-color: #ffffff;
+    box-shadow: 0px 0px 5px 2px #00000025;
+}
+
+/* image */
+section.decouverte .image{
+    margin-top: 20px;
+
+    background-size: cover;
+    background-position: center;
+    background-color: var(--colorPrimaire);
+    box-shadow: 0px 0px 5px 2px #00000025;
+}
+
+/* ------------------- SECTION A PROPOS  ------------------- */
+section.apropos{
+    padding: 20px 10% ;
+}
+
+section.apropos h2{
+    margin-bottom: 20px;
+}
+
+section.apropos h4{
+    color: orange;
+}
+
+section.apropos .cart{
+    padding: 20px;
+    margin-bottom: 20px;
+
+}
+
+section.apropos h5{
+    color: #ff0000;
+}
+
+.thead-dark{
+    color: #fff;
+    background-color: var(--colorPrimaire);
+}
+
+/* ----------------------------------
+        LES SECTIONS
+----------------------------------- */
+#info{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    height: 30px;
+    
+    color: #fff;
+    background-color: #000000;
+    z-index: 10;
+}
+
+#info span{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 2%;
+
+    color: #fff;
+    background-color: red;
+    z-index: 10;
+}
+
+
+
+/* ------------------- SECTION MODALITE  ------------------- */
+footer.contacts{
+    padding-top: 5%;
+    padding-bottom: 5%;
+    
+
+    color: #fff;
+    background-color: rgb(30, 43, 63);
+}
+
+footer.contacts .cart{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+footer.contacts p{
+    color: #8a8a8a;
+}
+
+
+
+footer.contacts .image{
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url('../SVG/logo.jpg');
+}
+
+
+/* -------------------------------------------------------------
+----------------------------------------------------------------
+                LES MEDIAS QUERY
+----------------------------------------------------------------
+------------------------------------------------------------- */
+@media (max-width: 800px)  { 
+
+    /* ----------------------------------
+        LA NAV BARRE    
+    ----------------------------------- */
+    .conteneur{
+        padding: 0 5%;
+    }
+    
+    nav{
+        top: 0;
+        position: fixed;
+    }
+
+    nav .logo{
+        z-index: 11;
+    }
+    
+    /* nav link */
+    nav  .menu{
+        display: none;
+        position: fixed;
+        top: 0px;
+        left: 0;
+        right: 0;
+        height: 100vh;
+        padding-top: 60px;
+        padding-left: 5%;
+        padding-right: 5%;
+
+        background-color: rgb(255, 255, 255);
+    }
+
+    nav  .menu a.link{
+        /* display: none; */
+        display: block;
+        padding-left: 0;
+
+        color: var(--colorPrimaire);
+    }
+
+    nav .user a.link{
+        display: none;
+    }
+
+    /* les links.close */
+    nav a.close{
+        display: block;
+        text-decoration: none;
+        padding-left: 0;
+        padding-top: 18px;
+        padding-bottom: 18px;
+
+        color: var(--colorPrimaire);
+        transition: color 200ms;
+    }
+
+    nav a.close:hover {
+        font-weight: bold;
+        border-bottom: var(--colorPrimaire);
+        border-bottom: 2px solid var(--colorPrimaire) ;
+        color: var(--colorPrimaire);
+    }
+
+    /*  */
+    nav #btn-close svg{
+        display: block;
+        width: 25px;
+    
+        cursor: pointer;
+        stroke: var(--colorPrimaire);
+    }
+
+
+    /* btn-toggle-menu */
+    #btn-toggle-menu svg{
+        top: 10px;
+        display: block;
+
+        stroke: var(--colorPrimaire);
+    }
+
+    /* btn-close */
+    #btn-close{
+        position: absolute;
+        top: 20px;
+        right: 5%;
+
+        cursor: pointer;
+    }
+
+
+
+    /* ----------------------------------
+        LAE HEADER
+    ----------------------------------- */
+    header{
+        width: 100%;
+        height: 100vh;
+
+        background-color: #ddd;
+    }
+
+    
+    header .drap{
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        right: 0;
+
+        background-color: #0000004d;
+        z-index: 2;
+    }
+
+    header .contain-mot{
+        display: block;
+    }
+
+
+    /* ----------------------------------
+        LE CAROUSSEL
+    ----------------------------------- */
+    .carousel-inner{
+        height: 100vh;
+    }
+
+    .carousel-inner img{
+        height: 100vh;
+    }
+
+    /* ----------------------------------
+
+    ---------------------------------- */
+    /* image */
+    section.decouverte .image{
+        width: 100%;
+        height: 45vh;
+    }
+
+
+    /* ----------------------------------
+        LA SECTION 
+    ----------------------------------- */
+    footer.contacts{
+        text-align: center;
+    }
+
+    footer.contacts .image{
+        width: 100vh;
+        height: 40vh;
+        margin-top: 20px;
+        margin-bottom: 40px;
+
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-image: url('../SVG/logo.jpg');
+    }
+
+
+}
